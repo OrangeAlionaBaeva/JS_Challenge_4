@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitions</title>
+    <script src="./script.js"></script>
+    <style>
+        body {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        }
+        
+        .calculations,
+        .test {
+            display: flex;
+            width: 85%;
+            margin: 0 auto;
+            padding-top: 50px;
+            justify-content: space-around;
+        }
+        
+        .test {
+            line-height: 36px;
+            font-size: 20px;
+        }
+        
+        .calculationsDolphins,
+        .calculationsKoalas {
+            border: 1px solid;
+            padding: 35px;
+        }
+        
+        #dolphinsAverage,
+        #koalasAverage {
+            color: green;
+            font-size: 16px;
+        }
+        
+        #winner,
+        #winnerScore {
+            color: red;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="test">
+        GYMNASTIC COMPETITIONS. Dolphins VS Koalas.
+        <br> Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+        <br> Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+    </div>
+    <div class="calculations">
+        <div class="calculationsDolphins">
+            <div class="data">
+                <h2>Please, enter Dolphins scores </h2>
+                <br>Competition 1:
+                <input type="number" id="dolphinsFirstCompetition" placeholder="0" value=""> points
+                <br>
+                <br>Competition 2:
+                <input type="number" id="dolphinsSecondCompetition" placeholder="0" value=""> points
+                <br>
+                <br>Competition 3:
+                <input type="number" id="dolphinsThirdCompetition" placeholder="0" value=""> points
+                <br><br>
+                <br><br>
+                <div id="dolphinsAverage"></div>
+            </div>
+        </div>
+        <div class="calculationsKoalas">
+            <div class="data">
+                <h2>Please, enter Koalas scores</h2>
+                <br>Competition 1:
+                <input type="number" id="koalasFirstCompetition" placeholder="0" value=""> points
+                <br>
+                <br>Competition 2:
+                <input type="number" id="koalasSecondCompetition" placeholder="0" value=""> points
+                <br>
+                <br>Competition 3:
+                <input type="number" id="koalasThirdCompetition" placeholder="0" value=""> points
+                <br><br>
+                <br><br>
+                <div id="koalasAverage"></div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="calcAverage()">CALCULATE THE WINNER </button>
+            <br><br>
+            <div id="koaVSdol"></div>
+            <br>
+            <div id="winner"></div>
+            <br>
+            <div id="winnerScore"></div>
+            <br><br>
+            <button onclick="myFunctionRefresh()">RESET SCORES</button>
+        </div>
+    </div>
+</body>
+
+</html>
